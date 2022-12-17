@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>About us Page</title>
+	<style>
+@font-face {
+    font-family: josefin;
+    src: url(Josefin_Sans/static/JosefinSans-ThinItalic.ttf);
+} 
+		
+* {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navbar-height: 59px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    /* width: 85%;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto; */
+}
+
+.nav-list {
+    width: 70%;
+    display: flex;
+}
+
+.nav-list li {
+    font-family: josefin;
+    font-weight: 550;
+    font-size: 20px;
+    list-style: none;
+    padding: 2px 6px;
+	position: relative;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+.nav-list li a {
+
+    text-decoration: none;
+    color: white;
+}
+.nav-list li::after{
+    content: '';
+    background: cyan;
+    height: 2px;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+    top: 20px;
+}
+.nav-list li:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+	top: 20px;
+}
+
+.rightNav {
+    width: 50;
+    text-align: right;
+}
+
+#search {
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+}
+
+.background {
+    background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.firstsection {
+    height: 93.8vh;
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+}
+
+.firstHalf {
+    width: 75%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center
+}
+
+.firstHalf img {
+    display: flex;
+    border-radius: 9050px;
+}
+
+.text-big {
+    font-family: josefin;
+    font-weight: lighter;
+    font-size: 41px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.text-small {
+    font-family: josefin;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+	</style>
+</head>
+<body>
+    <div class="r">
+	<nav class="navbar background">
+		<ul class=" nav-list">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+		<div class=" rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+	<section class=" background firstsection">
+		<div class=" box-main">
+			<div class=" firstHalf">
+				<p class=" text-big" >About Us</p>
+				
+				<p class="text-small">
+					We started our website based on the tourism for helping people on going to trips easily without any problem by letting them know about the places they want to visit.
+					<br>
+					In this way we can help many people as it completes my aim of building this website 
+				</p>
+			</div>
+		</div>
+    </div>
+	</section>
+</body>
+</html>
