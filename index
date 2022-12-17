@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        LOKI
+    </title>
+    <style>
+        
+@font-face {
+    font-family: josefin;
+    src: url(Josefin_Sans/static/JosefinSans-ThinItalic.ttf);
+} 
+*{
+    padding: 0;
+    font-family: josefin,sans-serif;
+    margin: 0;
+}
+.r{
+    background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    position: relative;
+}
+.navbar{
+    width: 85%;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    background: cyan;
+    height: 2px;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+    top: 15px;
+}
+.navbar ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.button-button{
+    margin-left: 135px;
+    top: 120px;
+    color: white;
+    position: relative;
+    
+}
+.button{
+
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border: 0;
+    width: 175px;
+    padding: 4px;
+    padding-left: 20px;
+
+}
+.button::after{
+    content: '';
+    background: orange;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: transform 200ms ease-in;
+}
+.button::after{
+    transform: scaleX(0.08);
+    transform-origin: left;
+    
+}
+.button-button:hover .button::after{
+    transform: scaleX(1);
+}
+.specialities{
+    position: relative;
+    padding-left: 150px;
+    z-index: 1;
+    color: transparent;
+    top: 10px;
+    padding: 10px;
+    font-variant: small-caps;
+    width: 500px;
+    margin-left: 155px;
+    margin-top: -10px;
+    transition: color 150ms 400ms;
+     
+}
+
+.specialities::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 250ms ease-in 250ms;
+}
+.button-button:hover .specialities::after{
+    transform: scaleY(1);
+}
+.button-button:hover .specialities{
+    color: black;
+}
+.font{
+    color: white;
+    position: absolute;
+    font-family: josefin;
+    left: 850px;
+    font-size: 100px;
+    top: 200px;
+}
+    </style>
+</head>
+<body>
+    <div class="r">
+        <div class="navbar ">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="button-button">
+            <h3 class="button">WHY CHOOSE US</h3>
+            <UL class="specialities">
+                <li><b>100% Fresh</b></li>
+                <br>
+                <li><b>Fast Delivery</b></li>
+                <br>
+                <li><b>24/7 Support</b></li>
+            </UL>
+        </div>
+        <div class="font">
+            <p>"WE LIVE </p> <p>  TO EAT"</p>
+        </div>
+    </div>
+</body>
+</html>
